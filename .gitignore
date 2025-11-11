@@ -1,0 +1,69 @@
+# Database files
+*.dm
+*.db
+*.sqlite
+*.sqlite3
+
+# Markdown files
+*.md
+
+# Sensitive configuration files
+includes/db_connect.php
+
+# Uploaded files (user content)
+uploads/profile_pictures/*
+!uploads/profile_pictures/.gitkeep
+uploads/videos/*
+!uploads/videos/.gitkeep
+uploads/thumbnails/*
+!uploads/thumbnails/.gitkeep
+
+# Log files
+*.log
+error_log
+access_log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# PHP
+*.cache
+
+# Composer
+vendor/
+composer.phar
+composer.lock
+
+# Node modules (if any)
+node_modules/
+
+# Temporary files
+tmp/
+temp/
+cache/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Environment files
+.env
+.env.local
+.env.*.local
