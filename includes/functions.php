@@ -16,12 +16,12 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Security Headers - Prevent various attacks
-header("X-Frame-Options: SAMEORIGIN"); // Prevent clickjacking
+header("X-Frame-Options: DENY"); // Prevent clickjacking - deny all framing
 header("X-Content-Type-Options: nosniff"); // Prevent MIME sniffing
 header("X-XSS-Protection: 1; mode=block"); // XSS protection
 header("Referrer-Policy: strict-origin-when-cross-origin"); // Control referrer information
 header("Permissions-Policy: geolocation=(), microphone=(), camera=()"); // Disable unnecessary features
-header("Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"); // CSP
+header("Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none';"); // CSP with frame-ancestors
 
 /**
  * A simple helper function to securely output data to the screen.
