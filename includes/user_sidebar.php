@@ -364,7 +364,7 @@ try {
                 <div class="relative group">
                     <a href="<?= htmlspecialchars($assessment_link, ENT_QUOTES, 'UTF-8') ?>" class="<?= htmlspecialchars($assessment_classes, ENT_QUOTES, 'UTF-8') ?>" 
                        <?= !$sidebar_can_take_assessment ? 'onclick="showAssessmentTooltip(event)"' : '' ?>>
-                        <div class="w-10 h-10 rounded-xl <?= $sidebar_has_passed ? 'bg-gradient-to-br from-green-500 to-emerald-600' : ($sidebar_can_take_assessment ? 'bg-gradient-to-br from-yellow-500 to-orange-500' : 'bg-gradient-to-br from-gray-500 to-gray-600') ?> flex items-center justify-center mr-4">
+                        <div class="w-10 h-10 rounded-xl flex items-center justify-center mr-4 <?= $sidebar_has_passed ? 'bg-gradient-to-br from-green-500 to-emerald-600' : ($sidebar_can_take_assessment ? 'bg-gradient-to-br from-yellow-500 to-orange-500' : 'bg-gradient-to-br from-gray-500 to-gray-600') ?>">
                             <?php if ($sidebar_has_passed): ?>
                                 <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
