@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const correctInputName = inputType === 'radio' ? 'correct_answer' : `options[${index}][is_correct]`;
             optionDiv.innerHTML = `
                 <input type="${inputType}" name="${correctInputName}" value="${index}" class="h-5 w-5 text-primary focus:ring-primary border-gray-300" ${option.is_correct ? 'checked' : ''}>
-                <input type="text" name="options[${index}][text]" value="${option.text || ''}" placeholder="Option text" required class="flex-grow rounded-md border-gray-300 shadow-sm">
+                <input type="text" name="options[${index}][text]" value="${escapeHTML(option.text || '')}" placeholder="Option text" required class="flex-grow rounded-md border-gray-300 shadow-sm">
                 <input type="hidden" name="options[${index}][id]" value="${option.id || ''}">
                 <button type="button" class="remove-option-btn text-red-500 hover:text-red-700">&times;</button>
             `;
@@ -402,7 +402,7 @@ function editModule(id) {
                         <svg class="w-4 h-4 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        <span><strong>Current video:</strong> ${module.video.video_path.split('/').pop()}</span>
+                        <span><strong>Current video:</strong> ${escapeHTML(module.video.video_path.split('/').pop())}</span>
                     </div>
                     <p class="mt-1 text-xs">Leave empty to keep current video, or upload a new one to replace it.</p>
                 `;
