@@ -185,7 +185,7 @@ $current_page_name = htmlspecialchars($page_names[$current_page] ?? ucfirst(str_
 
                         <!-- Profile Dropdown -->
                         <div class="relative" id="profile-dropdown-container">
-                            <button id="profile-dropdown-button" class="flex items-center space-x-3 p-2 rounded-xl bg-white shadow-sm border border-gray-200 hover:shadow-md transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            <button id="profile-dropdown-button" class="flex items-center space-x-3 p-2 rounded-xl bg-white shadow-sm border border-gray-200 hover:shadow-md transition-all duration-200 hover:scale-105 focus:outline-none">
                                 <!-- User Info (Hidden on Mobile) -->
                                 <div class="hidden lg:block text-right">
                                     <p class="text-sm font-semibold text-gray-900 leading-tight">
